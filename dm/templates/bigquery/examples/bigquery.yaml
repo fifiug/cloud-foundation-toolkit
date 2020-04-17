@@ -13,7 +13,6 @@ resources:
       name: test-bq-dataset
       location: US
       access:
-           #- role: READER 
          - view:
               projectId: xxxx
               datasetId: xxxx
