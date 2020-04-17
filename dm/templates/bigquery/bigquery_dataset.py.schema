@@ -91,8 +91,11 @@ properties:
     items:
       type: object
       additionalProperties: false
-      required:
-        - role
+      oneOf:
+       - required:
+         - role
+       - required:
+         - view
       properties:
         role:
           type: string
