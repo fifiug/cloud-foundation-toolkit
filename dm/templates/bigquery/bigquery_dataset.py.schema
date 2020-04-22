@@ -90,12 +90,6 @@ properties:
         access.userByEmail: [dataset creator email]; access.role: OWNER
     items:
       type: object
-      additionalProperties: false
-      oneOf:
-       - required:
-         - role
-       - required:
-         - view
       properties:
         role:
           type: string
@@ -145,7 +139,7 @@ properties:
               description: The ID fo the project containing the table.
             tableId:
               type: string
-              pattern: ^[0-9a-zA-Z][0-9a-zA-Z_]{4,1023}$
+              pattern: ^[0-9a-zA-Z][0-9a-zA-Z_]{0,1023}$
               description: |
                 The table ID. The ID must contain only letters
                 (a-z, A-Z), numbers (0-9), or underscores (_). The maximum

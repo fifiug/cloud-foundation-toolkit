@@ -13,6 +13,8 @@ resources:
       name: test-bq-dataset
       location: US
       access:
+         - role: OWNER
+           userByEmail: <FIXME:my_account@email.com>
          - view:
               projectId: xxxx
               datasetId: xxxx
